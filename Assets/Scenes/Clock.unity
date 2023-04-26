@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7532517264733410895, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
-  numberOfObjects: 10
+  numberOfObjects: 7
   InputEvent:
     m_PersistentCalls:
       m_Calls:
