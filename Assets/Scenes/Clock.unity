@@ -331,7 +331,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7532517264733410895, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
-  numberOfObjects: 0
+  numberOfObjects: 2
+  InputEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1655230350}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: AddAnotherClock
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1655230351
 Transform:
   m_ObjectHideFlags: 0

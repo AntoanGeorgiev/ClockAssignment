@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
     public GameObject prefab;
     public int numberOfObjects;
-
+    public UnityEvent InputEvent;
+    bool a = false;
     void Start()
     {
         if (numberOfObjects > 10) { numberOfObjects = 10; }
@@ -22,4 +24,35 @@ public class Spawner : MonoBehaviour
             }
         }
     }
-}
+
+
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            InputEvent.Invoke();
+        }
+    }
+
+    public void AddAnotherClock()
+    {
+        if (numberOfObjects < 10)
+        {
+            do
+            {
+                Vector3 randomPosition = new Vector3(Random.Range(-9f, 9f), Random.Range(-4f, 4f), 0f);
+                Collider[] colliders = Physics.OverlapSphere(randomPosition, 1.5f);
+                if (colliders.Length == 0)
+                {
+                    Instantiate(prefab, randomPosition, Quaternion.identity);
+                    numberOfObjects++;
+                    a = true;
+                }
+            }
+            while (!a);
+            a = false;
+        }
+        else Debug.Log("Too many clocks!");
+    }
+ }
