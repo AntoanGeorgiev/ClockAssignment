@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7532517264733410895, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
-  numberOfObjects: 2
+  numberOfObjects: 10
   InputEvent:
     m_PersistentCalls:
       m_Calls:
@@ -347,6 +347,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  hourMaterial: {fileID: 2100000, guid: 3746652c74d9ad045a59ea99680170cf, type: 2}
+  minutesMaterial: {fileID: 2100000, guid: 3100913307b55b6489ab704703044faa, type: 2}
+  secondsMaterial: {fileID: 2100000, guid: 8327c13c572d9c04da88ddedb77fc301, type: 2}
 --- !u!4 &1655230351
 Transform:
   m_ObjectHideFlags: 0
@@ -413,6 +416,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7532517264733410893, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
+      propertyPath: hourMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3746652c74d9ad045a59ea99680170cf, type: 2}
+    - target: {fileID: 7532517264733410893, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
+      propertyPath: minutesMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3100913307b55b6489ab704703044faa, type: 2}
+    - target: {fileID: 7532517264733410893, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
+      propertyPath: secondsMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8327c13c572d9c04da88ddedb77fc301, type: 2}
     - target: {fileID: 7532517264733410895, guid: 6475f6dcf7ee9f44c823f490d5032bb7, type: 3}
       propertyPath: m_Name
       value: Clock

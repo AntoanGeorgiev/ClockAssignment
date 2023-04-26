@@ -7,8 +7,12 @@ public class Spawner : MonoBehaviour
     public int numberOfObjects;
     public UnityEvent InputEvent;
     bool a = false;
+    [SerializeField] Material hourMaterial;
+    [SerializeField] Material minutesMaterial;
+    [SerializeField] Material secondsMaterial;
     void Start()
     {
+        float b = UnityEngine.Random.Range(1f, 4f);
         if (numberOfObjects > 10) { numberOfObjects = 10; }
         for (int i = 0; i < numberOfObjects; i++)
         {
@@ -23,9 +27,25 @@ public class Spawner : MonoBehaviour
                 i--;
             }
         }
+        if (b >= 1f && b < 2f)
+        {
+            hourMaterial.color = Color.blue;
+            minutesMaterial.color = Color.yellow;
+            secondsMaterial.color = Color.red;
+        }
+        if (b >= 2f && b < 3f)
+        {
+            hourMaterial.color = Color.cyan;
+            minutesMaterial.color = Color.grey;
+            secondsMaterial.color = Color.gray;
+        }
+        if (b >= 3f && b < 4f)
+        {
+            hourMaterial.color = Color.black;
+            minutesMaterial.color = Color.black;
+            secondsMaterial.color = Color.black;
+        }
     }
-
-
 
     void Update()
     {
